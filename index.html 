@@ -1,0 +1,262 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Post-It</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600/Nunito+Sans:400,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Font Awesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+<!--*** Header Section ***-->
+    <header>
+        <nav class="navbar">
+            <span class="navbar-toggle" id="js-navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </span>
+            <a href="#" class="logo">Marsha Codes & Designs</a>
+            <ul class="main-nav" id="js-menu">
+                <li>
+                    <a href="#home" class="nav-links">Home</a>
+                </li>
+                <li>
+                    <a href="#post" class="nav-links">Posts</a>
+                </li>
+                <li>
+                    <a href="#create-post" class="nav-links">Create Post Form</a>
+                </li>
+            </ul>
+
+            <script>let mainNav = document.getElementById('js-menu');
+            let navBarToggle = document.getElementById('js-navbar-toggle');
+
+            navBarToggle.addEventListener('click', function () {
+    
+            mainNav.classList.toggle('active');
+            });</script>
+        </nav>
+    </header>
+
+<!--*** Main Section ***-->
+    <main>
+        <section id="hero-area">
+            <div class="content-wrapper">
+                <h1>Post-It</h1>
+                
+                <figure>
+                    <a href="#">
+                        <img src="img/hero-image.png" alt="Marsha's JavaScript/Rails API Project" title="Marsha's JavaScript/Rails API Project"/>
+                    </a>
+                </figure>
+            
+            <div class="header-button">
+                <form action="#contact-form" method="get" target="_self">
+                    <button type="submit">Create a form!</button>
+                </form>
+            </div>
+            </div><!--Content Wrapper Ends Here-->
+        </section>
+
+        <!--*** About Me Section ***-->
+        <section id="about-me">
+            <div class="content-wrapper">
+                <div class="background">
+                
+                <div class="row">
+                    <div class="column">
+                    
+                    </div>
+                    <div class="column">
+                    
+                    </div>
+                    </div>
+                </div><!-- row ends here-->
+                
+                    <div class="middle-button">    
+                        <form action="#contact-form" method="get" target="_self">
+                            <button type="submit">Want to talk more?</button>
+                        </form>
+                    </div>
+                </div>   
+            </div><!--content wrapper ends here-->
+        </section>
+
+    <!--*** Work Section ***-->
+        <section id="work">
+            <div class="content-wrapper">
+                <div class="work-icon">
+                    <img src="img/work-icon.png" alt="Responsive icon free download from undraw.co"/>
+                </div><!--to style this icon in css-->
+                <h2>Samples of My Work</h2>
+                <div class="work-samples">
+                    <div class="row">
+                        <div class="column">
+                            <div class="column1">
+                                <div class="background"><!-- sets up background color for this box -->
+                                <div class="first-work-box">
+                                    
+                        </div><!--div class first work box ends here-->
+                        </div>
+                        </div><!--div class column1 ends here-->
+                        </div><!--div class column ends here-->
+                        <div class="column">
+                            <div class="column2">
+                                <div class="second-work-box">
+                                    
+                                </div><!-- div class second work box ends here -->
+                            </div><!-- div class column2 ends here -->
+                        </div><!--div class column ends here-->
+                    </div><!-- row 1 ends here -->
+                    
+                    <div class="row2">
+                        <div class="column">
+                            <div class="column1">
+                                <div class="third-work-box">
+                                    
+                                </div><!-- div class third work box ends here -->
+                            </div><!-- div class column1 ends here -->
+                        </div><!--div class column ends here-->
+                    
+                        <div class="column">
+                            <div class="column2">
+                                <div class="background">
+                                    <div class="forth-work-box">
+                                        
+                                    </div><!-- div class forth work box ends here -->
+                                </div>
+                            </div><!-- div class column2 ends here -->
+                        </div><!--div class column ends here-->
+                    </div><!-- row 2 end here -->
+                </div><!-- div class work samples ends here -->
+            </div><!-- work content wrapper ends here -->
+        </section>
+        
+        <!--*** Contact Section ***-->
+        <section class="contact">
+            <div class="top-section">
+                <h3>Create your post here</h3>
+            </div>
+
+            <div class="bottom-section">
+                <div id="contact-form">
+                    <div class="container">
+                        <form action="mailto:marsha@marshacodes.com" method="post" enctype="text/plain">
+                            <div class="flexbox-container">
+                                <div class="column1">
+                                    <label for="author_name">Name</label>
+                                    <input type="text" id="author_name" name="author_name" placeholder="Name...">
+                                    <label for="title">Title</label>
+                                    <input type="text" id="title" name="title" placeholder="Title...">
+                                    <label for="">Post Content</label>
+                                    <textarea id="content" name="content" placeholder="Write something..." style="height:200px"></textarea>
+                                </div>
+                                </div>
+                            </div><!--flexbox-container" ends here -->
+                            <div class="button">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </form>
+                    </div> 
+                </div>   
+            </div> <!-- bottom section ends here -->
+        </section>
+    </main>
+  <!--*** Footer Section ***-->
+    <footer>
+        <div class="content-wrapper">
+            <div class="top-section"> 
+        
+            </div>
+            <section class="social-icons"> 
+                <div class="icons">
+                    <ul>
+                        <li>
+                            <a href="http://www.github.com/marshaannon"><i class="fab fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/AnnonMarsha"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="http://www.linkedin.com/in/marshaannon"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://dribbble.com/MarshaAnnon"><i class="fab fa-dribbble"></i></a>
+                        </li>    
+                    </ul>
+                </div><!-- icons end here -->
+            </section>       
+        </div><!-- content wrapper ends here-->
+        <div class="copyright">
+            <h5>Copyright 2019 | Post It</h5>
+        </div>
+    </footer>
+    
+    <!-- Scroll to top button -->
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+    <script>//Get the button:
+        mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0; // For Safari
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+    
+  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  
+  
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-23581568-13');
+    </script>
+</body>
+</html>
