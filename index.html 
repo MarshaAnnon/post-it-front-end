@@ -103,10 +103,7 @@
     <!--*** Work Section ***-->
         <section id="work">
             <div class="content-wrapper">
-                <div class="work-icon">
-                    <img src="img/work-icon.png" alt="Responsive icon free download from undraw.co"/>
-                </div><!--to style this icon in css-->
-                <h2>Samples of My Work</h2>
+                
                 <div class="work-samples">
                     <div class="row">
                         <div class="column">
@@ -121,6 +118,15 @@
                         <div class="column">
                             <div class="column2">
                                 <div class="second-work-box">
+                                    
+                                </div><!-- div class second work box ends here -->
+                            </div><!-- div class column2 ends here -->
+                        </div><!--div class column ends here-->
+                    </div><!-- row 1 ends here -->
+
+                    <div class="column">
+                            <div class="column3">
+                                <div class="third-work-box">
                                     
                                 </div><!-- div class second work box ends here -->
                             </div><!-- div class column2 ends here -->
@@ -214,16 +220,16 @@
 
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
     <script>//Get the button:
-        mybutton = document.getElementById("myBtn");
+        myButton = document.getElementById("myBtn");
         
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function() {scrollFunction()};
         
         function scrollFunction() {
           if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
+            myButton.style.display = "block";
           } else {
-            mybutton.style.display = "none";
+            myButton.style.display = "none";
           }
         }
         
