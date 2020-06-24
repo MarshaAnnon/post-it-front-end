@@ -14,6 +14,7 @@ class Post {
     }
 
 //need a helper method for this.created_at
+//need to add a conditional to the like button so it only shows on the post show page and not with every post on the index page
     postHTML(){
         return (`
         <H3>${this.title}</H3>
@@ -25,18 +26,13 @@ class Post {
     }
 
     renderPost(){
-        
-    
         const postContainer = document.getElementById("post-container")
         const postCard = document.createElement("div")
-        
         postCard.classList.add("post-card")
-        
         postCard.innerHTML += this.postHTML()
         postContainer.appendChild(postCard)
         /*postCard.addEventListener("click", e => {
-            if (e.target.className === "like") this.likeBtn(e)}*/
-        
+            if (e.target.className === "like") this.likeBtn(e)}*/ 
     }
         
 }
@@ -44,3 +40,4 @@ class Post {
 // update post with likes
 // access to show post page
 // likes button on each post
+
