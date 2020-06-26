@@ -1,0 +1,117 @@
+body {
+  
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    }
+
+    h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.8em;
+    margin-left: 300px;
+    }
+
+    /*h3{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      font-family: 'Pacifico', cursive;
+      font-size: 1.8em;
+      margin-left: 500px;
+      }*/
+
+    #container {
+      width:1279px;
+      margin:auto;
+      margin-top:50px;
+    }
+
+    #form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    }
+
+    
+    .post-card{
+      float:left;
+      width:350px;
+      height: 550px;
+      background-color: white;
+      border-color: #545454;
+      color: #e34400;
+      margin:15px;
+      text-align: center;
+      font-size: 1em;
+    }
+    .center-text {
+      text-align: center;
+    }
+
+   /* #contact-form
+h1
+span {
+  color: #fffafb;
+}
+
+/*label {
+  color: #fffafb;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  padding: 0 5px;
+}
+
+/*input[type=text], 
+select, 
+textarea {
+  background-color: #fffafb;
+  width: 100%; /* Full width */
+  /*padding: 10px; 
+  border: none;
+  border-radius: 8px; 
+  box-sizing: border-box;  Make sure that padding and width stays in place */
+  /*margin-top: 12px;  Add a top margin */
+  /*margin-bottom: 12px; Bottom margin */
+  /*resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) 
+}*/
+
+/* Style the submit button with a specific background color etc */
+/*input[type=submit] {
+  background-color: #fffafb;
+  color: #bb0a21;
+  font-weight: bold;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-items: center;
+  margin: 0 auto;
+}*/
+
+/* When moving the mouse over the submit button, add a darker red color */
+/*input[type=submit]:hover {
+  background-color: #8c1c2b;
+  color: #fffafb;
+}*/
+
+/* Add a background color and some padding around the form */
+/*.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  border-radius: 8px;
+  background-color: #bb0a21;
+  height: auto;
+  padding: 1px 15px 40px 15px;
+  margin: 0 auto;
+  max-width: 80%;
+}*/
