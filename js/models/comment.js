@@ -1,5 +1,4 @@
 class Comment {
-
     
     constructor(id, title, content, author_name, likes, created_at){
         this.id = id
@@ -7,32 +6,28 @@ class Comment {
         this.name = name
         this.post_id = post_id
         this.created_at = created_at
-        this.renderComment()
-            
+        this.renderComment()       
     }
-//need to add a conditional to the like button so it only shows on the post show page and not with every post on the index page
-    commentHTML(){
-        return (`
-        <h4>Would you like to add a comment?</h4>
-            <label for="content"></label><br>
-            <textarea type="text" name="${this.content}" rows="10" cols="80"  placeholder="Spread the love..."> </textarea>
-            <br>
-            <label for="name"><h4>Name</h4></label>
-            <input type="text" name="${this.name}" placeholder="your name">
-            <br>
-            <input type="submit" value="Submit">
-          </form>
-        `
-        )}
+    
+    static commentHTML(){
+        return (
+            `
+            <div id="comment-form">
+                <form>
+                    <h4>Would you like to add a comment?</h4>
+                    <label for="content"></label><br>
+                    <textarea type="text" name="comment-content" rows="10" cols="80"        placeholder="Spread the love..."> </textarea>
+                    <br>
+                    <label for="name"><h4>Name</h4></label>
+                    <input type="text" name="name" placeholder="your name">
+                    <br>
+                    <br>
+                    <input type="submit" value="Submit">
+                <form>
+            </div>
 
-    renderComment(){
-        const commentContainer = document.getElementById("comment-container")
-        const commentCard = document.createElement("div")
-        commentCard.classList.add("comment-card")
-        commentCard.innerHTML += this.commentHTML()
-        commentContainer.appendChild(commentCard)
-        /*postCard.addEventListener("click", e => {
-            if (e.target.className === "like") this.likeBtn(e)}*/ 
+        `
+        )
     }
 
 }
