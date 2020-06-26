@@ -17,12 +17,12 @@ class Post {
     postHTML(){
         return (`
         <div id="${this.id}">
-        <h3 class="title-link"><span>${this.title}</span></h3>
+        <h3><span>${this.title}</span></h3>
         <h5>${this.created_at}</h5> 
         <p>${this.content}</p>
         <h5>${this.author_name}</h5>
-        <h5>${this.likes}</h5>
-        <button onclick=API.js.likePost() type="button" id="like-button">Like</button>
+        <h5 class="likes">${this.likes}</h5>
+        <button onclick=API.likePost() type="button" id="like-button">Send Love</button>
         </div>
         `)
     }
@@ -34,15 +34,14 @@ class Post {
         postCard.innerHTML += this.postHTML()
         postContainer.appendChild(postCard)
         postCard.addEventListener("click", (e) => {
-            if (e.target.parentElement.classList.contains("title-link")) this.showPost(e)
+            this.showPost(e)
         })
-        /*postCard.addEventListener("click", e => {
-            if (e.target.className === "like") this.likeBtn(e)}*/ 
     }
 
     showPost(e) {
         const postContainer = document.getElementById("post-container")
-        const postID = parseInt(e.target.parentElement.parentElement.id)
+        const postID = parseInt(e.target.parentElement.id)
+        debugger
         const postForm = document.getElementById("post-form")
         postContainer.innerHTML = ""
         postForm.innerHTML = ""
@@ -50,6 +49,7 @@ class Post {
         API.addPost(postID)
     }
 
+     
 }
 
 
