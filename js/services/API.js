@@ -6,22 +6,44 @@ class API {
         .then(resp => resp.json())
         .then(posts => {
             posts.forEach(post => {
-                const {id, title, content, author_name, likes, created_at} = post
-                new Post(id, title, content, author_name, likes, created_at)
+                const {id, title, content, author_name, likes, created_at, comments} = post
+                new Post(id, title, content, author_name, likes, created_at, comments).renderPost()
             })
+
+        })
+    }
+
+    static addNewPost(e){
+        e.preventDefault()
+        let data = {
+
+            'title': e.target.title.value,
+            'content': e.target.content.value,
+            'author_name': e.target.author_name.value
+        }
+
+        fetch('http://localhost:3000/posts', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(resp => resp.json())
+        .then(post => {
+            Post.clearPosts()
+            API.addPosts()
+            document.getElementById('post-form').reset()
         })
     }
 
     static addPost(id){
-        // write our fetch and send it to our back end
   
         fetch(`http://localhost:3000/posts/${id}`)
-        // grab our fetch response
         .then(resp => resp.json())
         .then(post => {
-            const {title, content, author_name, likes, created_at} = post
-            new Post(title, content, author_name, likes, created_at)
-           
+            const {id, title, content, author_name, likes, created_at, comments} = post
+            new Post(id, title, content, author_name, likes, created_at, comments).renderShowPost()
         })
     }
 
@@ -29,7 +51,7 @@ class API {
         const postID = parseInt(event.currentTarget.parentElement.id)
         let likes = parseInt(event.currentTarget.parentElement.querySelector(".likes").innerText)
         likes ++
-        event.currentTarget.parentElement.querySelector(".likes").innerText = likes //this could go on 47
+        event.currentTarget.parentElement.querySelector(".likes").innerText = likes 
         let likeData = {
             'likes': likes   
         }
@@ -41,35 +63,28 @@ class API {
             },
             body: JSON.stringify(likeData)
         })
-        // grab our fetch response
         .then(resp => resp.json())
         
     }
 
-
     static addComment(e){
         e.preventDefault()
-        // capture our form data
-        let data = {
-        
-            'content': e.target.content.value,
+        let cData = {
+            'content': e.target.commentContent.value,
             'name': e.target.name.value,
+            'post_id': parseInt(document.getElementsByClassName("post-card")[0].firstElementChild.id)  
         }
-        // write our fetch and send it to our back end
-        
-        fetch('http://localhost:3000/posts', {
+        fetch('http://localhost:3000/comments', {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(cData)
         })
-        // grab our fetch response
         .then(resp => resp.json())
-        .then(post => {
-            const {title, content, author_name, likes, created_at} = post
-            new Post(title, content, author_name, likes, created_at)
-            document.getElementById('post-form').reset()
+        .then(comment => {
+            API.addPost(comment["post_id"])
+            document.getElementById('comment-form').reset()
         })
     }
 }
