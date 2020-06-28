@@ -2,7 +2,7 @@ class Post {
     
     static all = []
     
-    constructor(id, title, content, author_name, likes, created_at, comments){
+    constructor(id, title, content, author_name, likes, img, created_at, comments){
         this.id = id
         this.title = title
         this.content = content
