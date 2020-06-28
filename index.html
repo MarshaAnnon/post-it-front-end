@@ -8,37 +8,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-      <h1>Spread some Love,</h1>
-      <h3>one post at a time</h3>
+    <header>
+      <div class="top-nav">
+        <a class="active" href="#home">Home</a>
+        <a href="http://localhost:3000/posts">Posts</a>
+      </div>
+    </header>
+    <section id="hero-section">
+      <h1>The Happiness Space, C'mon &amp; Spread some Love</h1>
         <div id="form">
           <form id="post-form">
-              <input type="text" name="title" placeholder="title"><br>
-              <label for="content"></label><br>
-              <textarea type="text" name="content" rows="20" cols="80" placeholder="Spread  the love..."> </textarea>
+              <h4>Create a <span>happy post</span> & push some good vibes into the world</h4>
+              <input type="text" name="title" required size="93" placeholder="title">
               <br>
-              <label for="author_name">Name</label><br>
-              <input type="text" name="author_name" placeholder="name">
+              <br>
+              <textarea type="text" name="content" rows="10" cols="80" maxlength="150" placeholder="Spread  the love..."></textarea>
+              <br>
+              <br>
+              <input type="text" name="author_name" required size="50" placeholder="name">
               <br>
               <input type="submit" value="Submit">
           </form>
-
-          <!--<form id="comment-form">
-            <h4>Would you like to add a comment?</h4>
-            <label for="content"></label><br>
-            <textarea type="text" name="comment-content" rows="10" cols="80"  placeholder="Spread the love..."> </textarea>
-            <br>
-            <label for="name"><h4>Name</h4></label>
-            <input type="text" name="name" placeholder="your name">
-            <br>
-            <br>
-            <input type="submit" value="Submit">
-          </form>-->
-
         </div><!--closing div for form-->
         <div id="post-container">
         </div>
         <div id="comment-container">
-        </div> 
+        </div>         
+    </section>
   </body>
   <script type="text/javascript" src="js/services/API.js"></script>
   <script type="text/javascript" src="js/models/post.js"></script>
