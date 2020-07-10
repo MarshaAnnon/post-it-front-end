@@ -1,27 +1,24 @@
 class API {
     
     static addPosts(){
-    
         fetch("http://localhost:3000/posts")
         .then(resp => resp.json())
         .then(posts => {
             posts.forEach(post => {
-                const {id, title, content, author_name, likes, created_at, comments} = post
-                new Post(id, title, content, author_name, likes, created_at, comments).renderPost()
+                const {id, title, content, author_name, likes, img, created_at, comments} = post
+                new Post(id, title, content, author_name, likes, img, created_at, comments).renderPost()
             })
-
         })
     }
 
     static addNewPost(e){
-        e.preventDefault()
+        e.preventDefault() 
         let data = {
-
             'title': e.target.title.value,
+            'img': e.target.image.value,
             'content': e.target.content.value,
-            'author_name': e.target.author_name.value
+            'author_name': e.target.author_name.value,
         }
-
         fetch('http://localhost:3000/posts', {
             method: 'POST',
             headers: {
@@ -30,7 +27,7 @@ class API {
             body: JSON.stringify(data)
         })
         .then(resp => resp.json())
-        .then(post => {
+        .then(() => {
             Post.clearPosts()
             API.addPosts()
             document.getElementById('post-form').reset()
@@ -42,8 +39,8 @@ class API {
         fetch(`http://localhost:3000/posts/${id}`)
         .then(resp => resp.json())
         .then(post => {
-            const {id, title, content, author_name, likes, created_at, comments} = post
-            new Post(id, title, content, author_name, likes, created_at, comments).renderShowPost()
+            const {id, title, content, author_name, likes, img, created_at, comments} = post
+            new Post(id, title, content, author_name, likes, img, created_at, comments).renderShowPost()
         })
     }
 
