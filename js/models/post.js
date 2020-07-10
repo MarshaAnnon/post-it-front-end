@@ -8,18 +8,18 @@ class Post {
         this.content = content
         this.author_name = author_name
         this.likes = likes
+        this.img = img
         this.created_at = created_at
         this.comments = comments
-        Post.all.push(this)//collecting all of the objects removes the need to call to call the fetch again, by storing the objects in the frontend. Depends on how the data is being loaded. Make sure the created data is being added to the all array. Make sure the static = [] keeps up with the creation.
+        Post.all.push(this)
              
     }
 
-//need a helper method for this.created_at
-//need to add a conditional to the like button so it only shows on the post show page and not with every post on the index page
     postIndexHTML(){
         return (`
             <div id="${this.id}">
                 <h4><span>${this.title}</span></h4>
+                <img src="${this.img}" width="150" height="150" />
                 <h5>${this.created_at}</h5> 
                 <p>${this.content}</p>
                 <h5>${this.author_name}</h5>
@@ -32,6 +32,7 @@ class Post {
         return (`
             <div id="${this.id}">
                 <h4><span>${this.title}</span></h4>
+                <img src="${this.img}"  width="150" height="150" />
                 <h5>${this.created_at}</h5> 
                 <p>${this.content}</p>
                 <h5>${this.author_name}</h5>
@@ -83,6 +84,7 @@ class Post {
             API.addPost(postID)
         }else{
             const postID = parseInt(e.target.parentElement.parentElement.id)
+
             API.addPost(postID)
         }
         
