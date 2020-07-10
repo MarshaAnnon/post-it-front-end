@@ -15,7 +15,7 @@ class Comment {
             <h4>Would you like to add a comment?</h4>
             <form id="comment-form">
                 <label for="content"></label><br>
-                <textarea type="text" name="commentContent" rows="10" cols="60"        placeholder="Spread the love..."> </textarea>
+                <textarea type="text" name="commentContent" rows="10" cols="60" placeholder="Spread the love..."> </textarea>
                 <br>
                 <label for="name"><h4>Name</h4></label>
                 <input type="text" name="name" placeholder="your name">
@@ -25,6 +25,7 @@ class Comment {
             <form>
         `)
     }
+
 
     renderComment(){
         const postContainer = document.getElementById("post-container")
