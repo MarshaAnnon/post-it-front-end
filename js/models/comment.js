@@ -26,7 +26,6 @@ class Comment {
         `)
     }
 
-
     renderComment(){
         const postContainer = document.getElementById("post-container")
         postContainer.innerHTML +=  `<div id="${this.id}">
