@@ -11,8 +11,7 @@ class Post {
         this.img = img
         this.created_at = created_at
         this.comments = comments
-        Post.all.push(this)
-             
+        Post.all.push(this)      
     }
 
     postIndexHTML(){
@@ -50,7 +49,6 @@ class Post {
         `)
     }
             
-
     renderPost(){
         const postContainer = document.getElementById("post-container")
         const postCard = document.createElement("div")
@@ -59,8 +57,7 @@ class Post {
         postContainer.appendChild(postCard)
         postCard.querySelector("h4").addEventListener("click", (e) => {
             this.showPost(e)
-        })
-        
+        }) 
     }
 
     renderShowPost(){
@@ -74,7 +71,6 @@ class Post {
 
     showPost(e) {
         const postContainer = document.getElementById("post-container")
-        
         const postForm = document.getElementById("post-form")
         postContainer.innerHTML = ""
         postForm.innerHTML = ""
@@ -84,10 +80,8 @@ class Post {
             API.addPost(postID)
         }else{
             const postID = parseInt(e.target.parentElement.parentElement.id)
-
             API.addPost(postID)
         }
-        
         let comForm = document.getElementById("comment-container")
         comForm.innerHTML += Comment.commentHTML()
     }
@@ -96,8 +90,6 @@ class Post {
         const postContainer = document.getElementById("post-container")
         postContainer.innerHTML = ""
     }
-
-
 }
 
 
